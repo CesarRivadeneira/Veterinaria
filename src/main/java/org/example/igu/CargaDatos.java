@@ -4,6 +4,8 @@
  */
 package org.example.igu;
 
+import javax.swing.JDialog;
+import javax.swing.JOptionPane;
 import org.example.logica.Controladora;
 
 /**
@@ -245,6 +247,12 @@ public class CargaDatos extends javax.swing.JFrame {
         control.guardar(nombreMasco, razaMasco, colorMasco, nombreDuenio, celularDuenio, observacionesMasco,
          alergico,
          atencionEspecial);
+        
+        JOptionPane optionPane= new JOptionPane("Se guardo correctamente");
+        optionPane.setMessageType(JOptionPane.INFORMATION_MESSAGE);
+        JDialog dialog = optionPane.createDialog("Guardado Exitoso");
+        dialog.setAlwaysOnTop(true);
+        dialog.setVisible(true);
     }//GEN-LAST:event_btnGuardarActionPerformed
 
  

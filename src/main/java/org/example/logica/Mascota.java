@@ -9,7 +9,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 
 
 
@@ -30,7 +30,7 @@ public class Mascota implements Serializable {
     private String Observaciones;
     private String Color;
     
-    @OneToMany
+    @OneToOne
     private Duenio duenio;
 
     public Mascota() {
