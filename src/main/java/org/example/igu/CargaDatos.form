@@ -109,8 +109,8 @@
                                       </Group>
                                       <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="txtNombreDueño" alignment="0" max="32767" attributes="0"/>
-                                          <Component id="txtCelularDueño" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="txtNombreDuenio" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="txtCelularDuenio" alignment="0" max="32767" attributes="0"/>
                                           <Component id="txtNombreMascota" alignment="0" max="32767" attributes="0"/>
                                           <Component id="txtRazaMascota" alignment="0" max="32767" attributes="0"/>
                                           <Group type="102" attributes="0">
@@ -162,12 +162,12 @@
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtNombreDueño" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtNombreDuenio" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtCelularDueño" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtCelularDuenio" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -222,9 +222,9 @@
             </Component>
             <Component class="javax.swing.JTextField" name="txtNombreMascota">
             </Component>
-            <Component class="javax.swing.JTextField" name="txtNombreDue&#xf1;o">
+            <Component class="javax.swing.JTextField" name="txtNombreDuenio">
             </Component>
-            <Component class="javax.swing.JTextField" name="txtCelularDue&#xf1;o">
+            <Component class="javax.swing.JTextField" name="txtCelularDuenio">
             </Component>
             <Component class="javax.swing.JTextField" name="txtColorMascota">
             </Component>

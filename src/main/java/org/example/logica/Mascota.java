@@ -4,6 +4,7 @@
  */
 package org.example.logica;
 
+import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -17,15 +18,15 @@ import javax.persistence.OneToMany;
  * @author Cesar
  */
 @Entity
-public class Mascota {
+public class Mascota implements Serializable {
     
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private int idMascota;
     private String Nombre;
     private String Raza;
-    private boolean alergia;
-    private boolean atEspecial;
+    private String alergia;
+    private String atEspecial;
     private String Observaciones;
     private String Color;
     
@@ -35,7 +36,7 @@ public class Mascota {
     public Mascota() {
     }
 
-    public Mascota(int idMascota, String Nombre, String Raza, boolean alergia, boolean atEspecial, String Observaciones, String Color, Duenio duenio) {
+    public Mascota(int idMascota, String Nombre, String Raza, String alergia, String atEspecial, String Observaciones, String Color, Duenio duenio) {
         this.idMascota = idMascota;
         this.Nombre = Nombre;
         this.Raza = Raza;
@@ -70,19 +71,19 @@ public class Mascota {
         this.Raza = Raza;
     }
 
-    public boolean isAlergia() {
+    public String isAlergia() {
         return alergia;
     }
 
-    public void setAlergia(boolean alergia) {
+    public void setAlergia(String alergia) {
         this.alergia = alergia;
     }
 
-    public boolean isAtEspecial() {
+    public String isAtEspecial() {
         return atEspecial;
     }
 
-    public void setAtEspecial(boolean atEspecial) {
+    public void setAtEspecial(String atEspecial) {
         this.atEspecial = atEspecial;
     }
 

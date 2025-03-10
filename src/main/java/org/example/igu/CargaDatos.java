@@ -4,17 +4,19 @@
  */
 package org.example.igu;
 
+import org.example.logica.Controladora;
+
 /**
  *
  * @author Cesar
  */
 public class CargaDatos extends javax.swing.JFrame {
 
-    /**
-     * Creates new form CargaDatos
-     */
+    Controladora control = new Controladora();
+    
     public CargaDatos() {
         initComponents();
+        //control controladora puede estar aca tambien
     }
 
     /**
@@ -37,8 +39,8 @@ public class CargaDatos extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         txtNombreMascota = new javax.swing.JTextField();
-        txtNombreDueño = new javax.swing.JTextField();
-        txtCelularDueño = new javax.swing.JTextField();
+        txtNombreDuenio = new javax.swing.JTextField();
+        txtCelularDuenio = new javax.swing.JTextField();
         txtColorMascota = new javax.swing.JTextField();
         cmbAtencionEspecial = new javax.swing.JComboBox<>();
         txtRazaMascota = new javax.swing.JTextField();
@@ -100,8 +102,8 @@ public class CargaDatos extends javax.swing.JFrame {
                                     .addComponent(jLabel8))
                                 .addGap(64, 64, 64)
                                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtNombreDueño)
-                                    .addComponent(txtCelularDueño)
+                                    .addComponent(txtNombreDuenio)
+                                    .addComponent(txtCelularDuenio)
                                     .addComponent(txtNombreMascota)
                                     .addComponent(txtRazaMascota)
                                     .addGroup(jPanel3Layout.createSequentialGroup()
@@ -139,11 +141,11 @@ public class CargaDatos extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
-                    .addComponent(txtNombreDueño, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtNombreDuenio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
-                    .addComponent(txtCelularDueño, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtCelularDuenio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel8)
@@ -218,11 +220,31 @@ public class CargaDatos extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed
-        // TODO add your handling code here:
+     
+        txtNombreMascota.setText("");
+        txtRazaMascota.setText("");
+        txtColorMascota.setText("");
+        cmbAlergico.setSelectedIndex(0);
+        cmbAtencionEspecial.setSelectedIndex(0);
+        txtNombreDuenio.setText("");
+        txtCelularDuenio.setText("");
+        txtObservacionesMascota.setText("");
     }//GEN-LAST:event_btnLimpiarActionPerformed
 
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
-        // TODO add your handling code here:
+        
+        String nombreMasco= txtNombreMascota.getText();
+        String razaMasco = txtRazaMascota.getText();
+        String colorMasco = txtColorMascota.getText();
+        String nombreDuenio = txtNombreDuenio.getText();
+        String celularDuenio = txtCelularDuenio.getText();
+        String observacionesMasco = txtObservacionesMascota.getText();
+        String alergico = (String)cmbAlergico.getSelectedItem();
+        String atencionEspecial = (String) cmbAtencionEspecial.getSelectedItem();
+        
+        control.guardar(nombreMasco, razaMasco, colorMasco, nombreDuenio, celularDuenio, observacionesMasco,
+         alergico,
+         atencionEspecial);
     }//GEN-LAST:event_btnGuardarActionPerformed
 
  
@@ -244,9 +266,9 @@ public class CargaDatos extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField txtCelularDueño;
+    private javax.swing.JTextField txtCelularDuenio;
     private javax.swing.JTextField txtColorMascota;
-    private javax.swing.JTextField txtNombreDueño;
+    private javax.swing.JTextField txtNombreDuenio;
     private javax.swing.JTextField txtNombreMascota;
     private javax.swing.JTextArea txtObservacionesMascota;
     private javax.swing.JTextField txtRazaMascota;
